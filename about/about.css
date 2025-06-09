@@ -108,6 +108,7 @@ nav.sticky {
 .btn-2 {
     display: flex;
     align-items: center;
+    margin-left: 90px;
     gap: 1rem;
     font-size: 1.3rem;
     font-weight: 500;
@@ -384,7 +385,7 @@ footer {
     }
 
     nav .btn-2{
-        display: none;
+      margin-left: 0;
     }
 
     /* nav bar ends/card start */
@@ -498,7 +499,7 @@ html, body {
   }
 
   nav .btn-2 {
-    display: none;
+    margin-left: 0;
   }
 
   /* nav ends  */

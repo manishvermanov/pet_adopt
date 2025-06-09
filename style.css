@@ -117,6 +117,7 @@ nav.sticky {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-left: 90px;
 }
 
 .btn-2 i {
@@ -667,6 +668,7 @@ footer {
         font-size: 24px;
     }
 
+   
     nav .menu
     {
         position: fixed;
@@ -705,9 +707,8 @@ footer {
         color: white;
     }
 
-    nav .btn-2{
-        display: none;
-    }
+    
+    
 
     .heropage
     {
@@ -992,9 +993,9 @@ html, body {
     margin: 15px;
   }
 
-  nav .btn-2 {
-    display: none;
-  }
+  nav .btn-2{
+      margin-left: 0;
+    }
 
   .heropage {
     background-image: url("images/hero-background-image.png");

@@ -107,6 +107,7 @@ nav.sticky {
 .btn-2 {
   display: flex;
   align-items: center;
+  margin-left: 90px;
   gap: 1rem;
   font-size: 1.3rem;
   font-weight: 500;
@@ -645,7 +646,7 @@ footer {
     }
 
     nav .btn-2{
-        display: none;
+      margin-left: 0;
     }
 
     /* nav bar ends/card start */
@@ -758,7 +759,7 @@ html, body {
   }
 
   nav .btn-2 {
-    display: none;
+      margin-left: 0;
   }
 
   /* nav ends  */
@@ -766,12 +767,12 @@ html, body {
   
     .requirements{
   
-      margin-top: 10%;
+      margin-top: 18%;
       margin-bottom: 0;
     }
 
     .requirements-headlines h1{
-      font-size: 2.1rem;
+      font-size: 1.8rem;
     }
 
     .requirements-headlines p{
