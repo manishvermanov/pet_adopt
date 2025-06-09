@@ -584,7 +584,7 @@ html, body {
    .animal-library {
     display: flex;
     flex-direction: row;        /* Keep side-by-side layout */
-    margin-top: 4rem;
+    margin-top: 5rem;
     padding: 20px 10px;
     gap: 0.2rem;
   }
@@ -610,8 +610,9 @@ html, body {
   }
 
   .character-card {
-    height: 270px;
-    padding: 1rem 0.5rem;
+    height: 320px;
+    padding: 0 0.5rem;
+
   }
 
 
@@ -623,8 +624,17 @@ html, body {
 
   .card-front p {
     padding: 12px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
+
+  .card-back h2{
+    font-size: 1.3rem;
+  }
+
+  .card-back p{
+    font-size: 1rem;
+  }
+
 
   /* footer starts */
   .footer-container {
