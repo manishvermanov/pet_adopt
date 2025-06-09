@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+
+    <!-- For Icons -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+
+    <title>FurreverHome | Pet Adoption</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="brand">
+            <h1>Furrever<b class="accent">Home</b></h1>
+        </a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="pets/pets.html">Pets</a>
+            <a href="req/req.html">Requirements</a>
+            <a href="about/about.html">About</a>
+            <a href="stories/stories.html">Stories</a>
+        </div>
+
+        <button class="btn-2" onclick="window.location.href='apply/apply.html'">
+            <p>Adopt Now</p>
+            <i class="fa-solid fa-paw" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+
+    <!-- Navbar ends/ Hero starts-->
+
+    <section class="heropage" id="hero">
+        <div class="hero-headlines">
+            <h1>Help Pets Find their<br> FurreverHome!</h1>
+            <p>Discover your Perfect Companion in Our Selection of Loving Pets Available for Adoption</p>
+            <div class="hero-headlines-buttons">
+                <button class="btn-3" onclick="window.location.href='pets/pets.html'">Our Pets</button>
+                <button class="btn-3 btn-transparent" onclick="window.location.href='apply/apply.html'">Adopt Now</button>
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="images/hero-img-1.png" alt="hero1">
+            <img src="images/hero-img-2.png" alt="hero2">
+            <img src="images/hero-img-3.png" alt="hero3">
+        </div>
+    </section>
+    <!-- Hero ends/ requirement starts -->
+
+    <section class="requirements" id="requirements">
+        <div class="requirements-headlines">
+            <h1>Our Process For Adoption</h1>
+            <p>Our process is simple and filled with joy <br>every step of the way:</p>
+            <div class="r-item-container">
+                <!-- r item 1 -->
+                <div class="r-item">
+                    <div class="r-logo" style="background-color: #b9ff46;">
+                        <i class="fa-regular fa-newspaper"></i>
+                    </div>
+                    <h5>Submitting an application</h5>
+                </div>
+                <!-- r item 2 -->
+                <div class="r-item">
+                    <div class="r-logo" style="background-color: #fff846;">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h5>Attending an online interview</h5>
+                </div>
+                <!-- r item 3 -->
+                <div class="r-item">
+                    <div class="r-logo" style="background-color: #fff846;">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h5>Meeting the pet in person</h5>
+                </div>
+                <!-- r item 4 -->
+                <div class="r-item">
+                    <div class="r-logo" style="background-color: #46c7ff;">
+                        <i class="fa-regular fa-file-zipper"></i>
+                    </div>
+                    <h5>Signing an adoption agreement</h5>
+                </div>
+                <!-- r item 5 -->
+                <div class="r-item">
+                    <div class="r-logo" style="background-color: #4fffca;">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h5>Congratulations on finding a match</h5>
+                </div>
+            </div>
+        </div>
+        <img src="images/requirements-img.png" alt="req_img" style="width: 35%;">
+    </section>
+
+    <!-- Reuirement ends/pet starts -->
+
+<section class="pets" id="pets">
+  <div class="pets-headlines">
+    <i class="fa-solid fa-paw"></i>
+    <h1>Meet your Soul Pets</h1>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev">&#10094;</button>
+
+    <div class="carousel-wrapper">
+      <div class="pets-collection" id="carousel">
+        <div class="pet-item">
+          <img src="images/pet-item-1.png" alt="p1" />
+          <h3>Sir Woofs</h3>
+        </div>
+        <div class="pet-item">
+          <img src="images/pet-item-2.png" alt="p2" />
+          <h3>Captain Squawks</h3>
+        </div>
+        <div class="pet-item">
+          <img src="images/pet-item-3.png" alt="p3" />
+          <h3>Professor Meow</h3>
+        </div>
+        <div class="pet-item">
+          <img src="images/pet-item-4.png" alt="p4" />
+          <h3>Admiral Bubbles</h3>
+        </div>
+        <div class="pet-item">
+          <img src="images/pet-item-5.png" alt="p5" />
+          <h3>General Whiskers</h3>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+
+  <button class="btn-3 btn-pets" onclick="window.location.href='pets/pets.html'">
+    <p>Find More</p>
+    <i class="fa-solid fa-arrow-right-long"></i>
+  </button>
+</section>
+
+
+    <!-- Pets end/about starts-->
+    <div class="about" id="about">
+        <div class="about-headlines">
+            <h1>About Us</h1>
+            <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="black">
+                FurreverHome is not just a
+                <b>pet adoption website</b>; it's a haven for both pets in search of
+                their forever homes and compassionate individuals ready to welcome
+                them with open arms.
+            </p>
+
+            <div class="about-info">
+                <div class="about-info-item">
+                    <h5>100+</h5>
+                    <h6>Saved Pets</h6>
+                </div>
+                <hr class="about-info-divider" />
+                <div class="about-info-item">
+                    <h5>100%</h5>
+                    <h6>Adoption Rate</h6>
+                </div>
+                <hr class="about-info-divider" />
+                <div class="about-info-item">
+                    <h5>5 Stars</h5>
+                    <h6>Community Loved</h6>
+                </div>
+            </div>
+            <button class="btn-3" onclick="window.location.href='apply/apply.html'">Get Started</button>
+        </div>
+        <img src="images/about-img.png" alt="img" style="transform: scale(0.95);">
+    </div>
+
+    <!-- About ends/ Testimonials starts-->
+
+
+    <div class="testimonials" id="stories">
+        <h6>OUR REVIEWS</h6>
+        <h1>What People Say</h1>
+        <div class="testimony-container">
+            <!-- Testimony Item 1 -->
+            <div class="testimony-item">
+                <div class="testimony-people">
+                    <div class="testimony-name">
+                        <img src="images/testimony-image-1.png" alt="img" />
+                        <div class="testimony-name-item">
+                            <h4>William Head</h4>
+                            <p>Sir Garfield's Owner</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="testimony-text">
+                    My experience with FurreverHome has been nothing short of amazing. After losing my previous pet, I
+                    was hesitant to open my heart again, but Purrfect made the process smooth and comforting.
+                </p>
+            </div>
+            <!-- Testimony Item 2 -->
+            <div class="testimony-item">
+                <div class="testimony-people">
+                    <div class="testimony-name">
+                        <img src="images/testimony-image-2.png" alt="img" />
+                        <div class="testimony-name-item">
+                            <h4>David Warner</h4>
+                            <p>Sir Dumbledore's Owner</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="testimony-text">
+                    My experience with FurreverHome has been nothing short of amazing. After losing my previous pet, I
+                    was hesitant to open my heart again, but Purrfect made the process smooth and comforting.
+                </p>
+            </div>
+            <!-- Testimony Item 3 -->
+            <div class="testimony-item">
+                <div class="testimony-people">
+                    <div class="testimony-name">
+                        <img src="images/testimony-image-3.png" alt="img" />
+                        <div class="testimony-name-item">
+                            <h4>Emily Johnson</h4>
+                            <p>Sir Austin's Owner</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <p class="testimony-text">
+                    My experience with FurreverHome has been nothing short of amazing. After losing my previous pet, I
+                    was hesitant to open my heart again, but Purrfect made the process smooth and comforting.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- testimonial ends/footer start -->
+    <footer id="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand fbox">
+                <h1>Furrever<b class="accent">Home</b></h1>
+                <p>Find your perfect soul pet today!</p>
+                <div class="socials">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links fbox">
+                <h2>Quick links</h2>
+                <div class="link-container">
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        <a href="about/about.html">About</a>
+                        <a href="pets/pets.html">Pets</a>
+                    </div>
+                    <div class="links">
+                        <a href="req/req.html">Requirements</a>
+                        <a href="stories/stories.html">Stories</a>
+                        <a href="apply/apply.html">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact-info fbox">
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Survey No. 124/1 Mittaganahalli Cross,Bengaluru, Karnataka 560064</p>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>furreverhome@gmail.com</p>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+91 8076707080</p>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">All Rights Reserved To <b>FurreverHome</b></p>
+    </footer>
+</body>
+
+</html>

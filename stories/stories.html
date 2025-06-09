@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stories.css" />
+    <script src="stories.js" defer></script>
+
+    <!-- For Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+   
+    <title>FurreverHome | Stories</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="brand">
+            <h1>Furrever<b class="accent">Home</b></h1>
+        </a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="../index.html">Home</a>
+            <a href="../pets/pets.html">Pets</a>
+            <a href="../req/req.html">Requirements</a>
+            <a href="../about/about.html">About</a>
+            <a href="stories.html">Stories</a>
+        </div>
+
+       <button class="btn-2" onclick="window.location.href='../apply/apply.html'">
+            <p>Adopt Now</p>
+            <i class="fa-solid fa-paw" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+
+    <!-- Navbar ends/ Hero starts-->
+
+    <section class="stories" id="stories">
+        <div class="stories-headline">
+            <i class="fa-solid fa-quote-left"></i>
+            <h2>Adoption Stories</h2>
+        </div>
+
+        <div class="review-grid">
+            <!-- Repeat this box 6 times -->
+            <div class="review-box" id="box1">
+                <img src="images/1.webp" alt="reviewer" class="review-img" />
+                <h3 class="review-name">Emily & Max</h3>
+                <p class="review-text" id="text1">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+
+            <div class="review-box" id="box2">
+                <img src="images/2.jpg" alt="reviewer" class="review-img" />
+                <h3 class="review-name">Daniel & Buddy</h3>
+                <p class="review-text" id="text2">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+
+            <div class="review-box" id="box3">
+                <img src="images/3.jpg" alt="reviewer" class="review-img" />
+                <h3 class="review-name">Sophia & Luna</h3>
+                <p class="review-text" id="text3">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+
+            <div class="review-box" id="box4">
+                <img src="images/4.jpg" alt="reviewer" class="review-img" />
+                <h3 class="review-name">Maya & Nibbles</h3>
+                <p class="review-text" id="text4">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+
+            <div class="review-box" id="box5">
+                <img src="images/5.webp" alt="reviewer" class="review-img" />
+                <h3 class="review-name">Sophie & Kiwi</h3>
+                <p class="review-text" id="text5">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+
+            <div class="review-box" id="box6">
+                <img src="images/6.jpg" alt="reviewer" class="review-img" />
+                <h3 class="review-name">Lily & Thumper</h3>
+                <p class="review-text" id="text6">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- post your review -->
+
+   <div class="review-box post-experience-box">
+  <h3 class="review-name">Share Your Experience</h3>
+
+  <input type="text" id="experienceName" placeholder="Your Name" />
+
+  <label for="experiencePhoto" class="custom-upload-label">Upload a photo</label>
+  <input type="file" id="experiencePhoto" accept="image/*" style="display: none;" />
+  <span id="fileNameDisplay" class="file-name">No file chosen</span>
+
+  <textarea id="experienceInput" placeholder="Write your adoption story here..." rows="5"></textarea>
+
+  <button id="submitExperience">Post Experience</button>
+</div>
+
+
+
+    <!-- testimonial ends/footer start -->
+    <footer id="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand fbox">
+                <h1>Furrever<b class="accent">Home</b></h1>
+                <p>Find your perfect soul pet today!</p>
+                <div class="socials">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links fbox">
+                <h2>Quick links</h2>
+                <div class="link-container">
+                    <div class="links">
+                        <a href="../index.html">Home</a>
+                        <a href="../about/about.html">About</a>
+                        <a href="../pets/pets.html">Pets</a>
+                    </div>
+                    <div class="links">
+                        <a href="../req/req.html">Requirements</a>
+                        <a href="stories.html">Stories</a>
+                        <a href="../apply/apply.html">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact-info fbox">
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Survey No. 124/1 Mittaganahalli Cross,Bengaluru, Karnataka 560064</p>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>furreverhome@gmail.com</p>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+91 8076707080</p>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">All Rights Reserved To <b>FurreverHome</b></p>
+    </footer>
+</body>
+
+</html>

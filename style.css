@@ -1,0 +1,1229 @@
+/* For Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --accent: #ff9a24;
+    --black: #131313;
+}
+
+body {
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Navbar Starts */
+
+nav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    background-color: white;
+    padding: 30px 50px;
+    transition: all 0.4s ease-out;
+    filter: drop-shadow(5px 5px 10px transparent);
+
+}
+
+nav.sticky {
+    background-color: white;
+    filter: drop-shadow(5px 5px 10px #ffbe745e);
+}
+
+.brand {
+    text-decoration: none;
+    transition: all ease-in-out0.3s;
+    color: var(--black);
+
+}
+
+.brand h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.brand:hover {
+    opacity: 0.8;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu a {
+    display: inline-block;
+    position: relative;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 32px;
+    background-color: white;
+    padding: 0.5rem;
+    transition: all 0.2s ease-out;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: var(--accent);
+}
+
+.btn {
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--black);
+    transition: all ease-in-out 0.2s;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-2 i {
+    font-size: 1.8rem;
+    transition: all 0.2s ease-out;
+}
+
+.btn-2:hover i {
+    color: var(--accent);
+}
+
+.btn-2:hover {
+    gap: 0.5rem;
+}
+
+/* Navbar ends/ Hero starts */
+
+.heropage {
+    margin-top: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/hero-background-image.png");
+}
+
+.hero-headlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.hero-headlines h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.hero-headlines p {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hero-headlines-buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.btn-3 {
+    width: 205px;
+    height: 53px;
+    background-color: var(--black);
+    font-size: 24px;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid var(--black);
+    transition: all 0.2s ease-out;
+}
+
+.btn-3:hover {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-transparent {
+    background-color: transparent;
+    color: var(--black);
+}
+
+.btn-transparent:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.hero-images {
+    display: flex;
+    margin-top: 56px;
+    gap: 35px;
+}
+
+/*  Hero ends/ requirement starts */
+
+.requirements {
+    margin-top: 50px;
+    /* padding-top: 120px; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url("images/requirements-background-img.png");
+}
+
+.requirements-headlines {
+    width: 658px;
+}
+
+.requirements-headlines h1 {
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.requirements-headlines p {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.r-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.r-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.r-logo {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--black);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.r-logo i {
+    font-size: 28px;
+}
+
+.r-logo h5 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* requirement ends/pets start */
+
+
+/* PETS HEADLINES */
+.pets-headlines {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pets-headlines i {
+  font-size: 3.2rem;
+  color: #7291ff;
+}
+
+.pets-headlines h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+}
+
+/* NEW - FULL WIDTH CONTAINER FOR CAROUSEL AND BUTTONS */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+/* CAROUSEL WRAPPER - holds the scrolling images */
+.carousel-wrapper {
+  width: 85%;       /* keeps your original 85% width */
+  overflow: hidden; /* hide scrollbars */
+}
+
+/* CAROUSEL SCROLLER */
+.pets-collection {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 4%;
+  padding: 2% 1%;
+}
+
+.pets-collection::-webkit-scrollbar {
+  display: none; 
+}
+
+/* PET ITEM */
+.pet-item {
+  flex: 1 1 calc(33.333%); /* 3 cards minus gap */
+  max-width: 33%;
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease-out;
+  background: #f9f9f9;
+  padding: 1.5%;
+  border-radius: 20px;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pet-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
+}
+
+.pet-item h3 {
+  margin-top: 5%;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* CAROUSEL BUTTONS */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px 14px;
+  z-index: 10;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+.carousel-btn:hover {
+    border-radius: 50%;
+  background-color: #eee;
+}
+
+.carousel-btn.prev {
+  left: 4%;  /* outside left of 85% container */
+}
+
+.carousel-btn.next {
+  right: 4%; /* outside right of 85% container */
+}
+
+.btn-pets {
+  width: 269px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 0px;
+  margin: 48px auto 0 auto; /* Top: 48px, auto left & right */
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+
+.btn-pets:hover {
+  background-color: var(--accent);
+}
+
+/* About ends/ */
+
+.about {
+    display: flex;
+    margin-top: 1%;
+    padding: 0px 5%;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+.about-headlines {
+    display: flex;
+    flex-direction: column;
+    width: 885px;
+}
+
+.about-headlines h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.about-headlines p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.about-info {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 76px;
+    margin-top: 40px;
+}
+
+.about-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-info-item h5 {
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.about-info-item h6 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.about-headlines button {
+    margin-top: 2.6rem;
+}
+
+/*About ends/ Testimonials starts */
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+
+}
+
+.testimonials h6 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.testimonials h1 {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.testimony-container {
+    display: flex;
+    margin-top: 34px;
+    gap: 24px;
+}
+
+.testimony-item {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 222px;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    padding: 24px 32px;
+}
+
+.testimony-people {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimony-people i {
+    font-size: 50px;
+    color: #ff5353;
+}
+
+.testimony-name {
+    display: flex;
+    gap: 14px;
+}
+
+.testimony-name h4 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.testimony-name p {
+    opacity: 0.8;
+}
+
+.testimony-text {
+    font-weight: 600;
+    margin-top: 28px;
+}
+
+/* testimonial ends/ footer starts */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    overflow: hidden;
+
+}
+
+.footer-container {
+    display: flex;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    padding: 32px 50px;
+
+}
+
+
+.footer-links h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.link-container {
+    display: flex;
+    gap: 67px;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.links a {
+
+    color: white;
+    text-decoration: none;
+    transition: all 0.3 ease-out;
+
+}
+
+.links a:hover {
+    color: var(--accent);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-brand h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.footer-brand p {
+    font-size: 1rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.socials a {
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 0.4rem 0.7rem;
+    background-color: var(--black);
+    transition: all 0.3s ease-out;
+
+}
+
+.socials a:hover {
+    background-color: var(--accent);
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 32px 50px;
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.contact-info-item i {
+    font-size: 1.8rem;
+}
+
+.contact-info-item p {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.fbox {
+    width: 33.33%;
+    /* 100% / 3 boxes */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+/* phone */
+
+@media (max-width: 768px){
+
+    section {
+    width: 100%;
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    /* navbar */
+
+    nav
+    {
+        padding: 20px 30px;
+        width: 100%;
+        height: 10%;
+    }
+    nav .btn
+    {
+        display: block;
+        color: var(--black);
+        font-size: 24px;
+    }
+
+    nav .menu
+    {
+        position: fixed;
+        background-color: var(--accent);
+        flex-direction: column;
+        min-width: 60%;
+        height: 100dvh;
+        top: 0;
+        right: -100%;
+        padding: 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+
+    nav .menu.active
+    {
+        right: 0;
+    }
+
+    nav .menu .close-btn
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        color: white;
+    }
+
+    nav .menu a{
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px;
+        padding: 0 15px;
+        background-color: var(--accent);
+        color: white;
+    }
+
+    nav .btn-2{
+        display: none;
+    }
+
+    .heropage
+    {
+        min-height: 100%;
+
+    }
+
+    .hero-headlines h1
+    {
+        font-size: 24px;
+    }
+
+    .hero-headlines p{
+        font-size: 14px;
+    }
+
+    .btn-3{
+        width: 126px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .hero-headlines{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .hero-images
+    {
+        gap: 14px;
+    }
+
+    .hero-images img{
+        width: 180px;
+    }
+    .requirements
+    {
+        margin-top: 0;
+    }
+    .requirements-headlines h1{
+        padding-left: 5%;
+        font-size: 32px;
+    }
+    .requirements-headlines p{
+        padding-left: 5%;
+        font-size: 16px;
+    }
+    .requirements-headlines{
+        width: 100%;
+    }
+    .requirements img{
+        padding-right: 5%;
+        width: 90%;
+    }
+    .r-item h5{
+        font-size: 14px;
+    }
+    .r-item-container{
+        padding-left: 5%;
+    }
+
+    .pets-headlines h1{
+        font-size: 24px;
+    }
+
+    .pets-headlines i{
+        font-size: 35px;
+    }
+
+    .carousel-wrapper {
+    width: 100%;
+  }
+
+  .pets-collection {
+    gap: 5%;
+    padding: 2% 6%;
+  }
+
+  .pet-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 6%;
+    border-radius: 16px;
+  }
+
+  .pet-item img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+  border-radius: 10%;
+}
+
+
+  .carousel-btn.prev {
+    left: 2%;
+  }
+
+  .carousel-btn.next {
+    right: 2%;
+  }
+
+  .pets-headlines h1 {
+    font-size: 2.4rem;
+  }
+
+  .pets-headlines i {
+    font-size: 2.4rem;
+  }
+
+  .pet-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .btn-pets {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  /* about sections starts */
+
+    .about{
+        margin-top: 10%;
+        padding: 0 20px;
+    }
+
+    .about-headlines h1{
+        font-size: 36px;
+    }
+
+    .about-headlines p{
+        font-size: 16px;
+    }
+
+    .about-info{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .about img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* testimony section */
+
+    .testimonials{
+        padding: 0 20px;
+    }
+    .testimonials h1{
+        font-size: 24px;
+    }
+
+    .testimonials h6{
+        font-size: 16px;
+    }
+.testimony-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimony-item {
+    width: 60%;       /* Full width inside container */
+    max-width: 100%;  /* No overflow */
+  }
+
+  .testimony-text {
+    font-size: 1rem;
+  }
+
+  .testimony-name-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .testimony-name-item p {
+    font-size: 0.9rem;
+  }
+
+  .testimony-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+
+     .footer-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .footer-brand,
+  .footer-links {
+    width: 48%; /* Side-by-side on first row */
+  }
+
+  .footer-contact-info {
+    width: 100%; /* Second row */
+    margin-top: 1.5rem;
+  }
+
+  .fbox {
+    margin-bottom: 0; /* Remove extra spacing */
+  }
+
+  .footer-links .link-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-links .links {
+    width: 48%;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-item p {
+    margin: 0;
+  }
+}
+
+/* for mobile */
+@media (max-width: 450px) {
+
+ 
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+  section {
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  nav {
+    padding: 16px 20px;
+    width: 100%;
+    height: 10%;
+  }
+
+  nav .btn {
+    display: block;
+    font-size: 20px;
+  }
+
+  nav .menu {
+    position: fixed;
+    background-color: var(--accent);
+    flex-direction: column;
+    min-width: 75%;
+    height: 100dvh;
+    top: 0;
+    right: -100%;
+    padding: 40px;
+    transition: 0.5s;
+  }
+
+  nav .menu.active {
+    right: 0;
+  }
+
+  nav .menu .close-btn {
+    margin: 20px;
+    font-size: 24px;
+  }
+
+  nav .menu a {
+    font-size: 18px;
+    margin: 15px;
+  }
+
+  nav .btn-2 {
+    display: none;
+  }
+
+  .heropage {
+    background-image: url("images/hero-background-image.png");
+    transform: scale(0.95); 
+    margin-top: 6rem; 
+  }
+
+
+  .hero-headlines h1 {
+    font-size: 20px;
+  }
+
+  .hero-headlines p {
+    font-size: 12px;
+  }
+
+  .btn-3 {
+    width: 110px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .hero-headlines {
+    padding: 0 2rem;
+  }
+
+  .hero-images {
+    gap: 10px;
+  }
+
+  .hero-images img {
+    width: 90px;
+  }
+
+  .requirements{
+    margin: 0 10px;
+  }
+
+  .requirements-headlines h1 {
+    font-size: 24px;
+    margin-top: 0.6rem;
+
+  }
+
+  .requirements-headlines p {
+    font-size: 14px;
+  }
+
+  .requirements img {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .r-item h5 {
+    font-size: 12px;
+  }
+  .r-logo{
+    width: 30px;
+    height: 30px;
+  }
+
+  .r-item i{
+    font-size: 15px;
+  }
+
+  .r-item-container {
+    padding-left: 5%;
+  }
+
+  .pets-headlines h1,
+  .pets-headlines i {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+
+  .carousel-wrapper {
+    width: 100%;
+  }
+
+  .pets-collection {
+    gap: 4%;
+    padding: 4%;
+  }
+
+  .pet-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 5%;
+  }
+
+  .pet-item img {
+    height: 40vh;
+    border-radius: 8%;
+  }
+
+  .pet-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn-pets {
+    width: 80%;
+    margin:auto;
+    font-size: 0.95rem;
+  }
+
+  .about {
+    margin-top: 10%;
+    padding-left: 15px;
+  }
+
+  .about-headlines h1 {
+    font-size: 3rem;
+  }
+
+  .about-headlines p {
+    font-size: 1.1rem;
+
+  }
+
+  .about-info {
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+
+  .about-info-item h5{
+    font-size: 1.5rem;
+  }
+  .about-info-item h6{
+    font-size: 0.8rem;
+  }
+
+  .about img {
+  display: block; /* removes extra space below image */
+  margin: 0;
+  padding: 0;
+  transform: scale(0.95); /* if you want to keep it */
+  object-fit: contain;
+  width: 20%;
+  height: auto;
+  align-self: flex-start; /* aligns image to the top */
+}
+
+  .testimonials {
+    padding: 0 15px;
+    margin-top: 10%;
+  }
+
+  .testimonials h1 {
+    font-size: 22px;
+  }
+
+  .testimonials h6 {
+    font-size: 14px;
+  }
+
+  .testimony-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimony-item {
+    width: 90%;
+    height: 250px;
+  }
+
+  .testimony-text {
+    font-size: 0.9rem;
+  }
+
+  .testimony-name-item h4 {
+    font-size: 1rem;
+  }
+
+  .testimony-name-item p {
+    font-size: 0.8rem;
+  }
+
+  .testimony-item img {
+    width: 45px;
+    height: 45px;
+  }
+
+
+  /* footer starts */
+  .footer-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-contact-info {
+    width: 100%;
+  }
+
+  .footer-links .link-container {
+    gap: 0.5rem;
+  }
+
+  .footer-links .links {
+    width: 100%;
+  }
+
+  .contact-info-item {
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-info-item p {
+    font-size: 0.9rem;
+  }
+  .footer-links .link-container {
+    display: flex;
+    flex-direction: row;      /* side by side */
+    justify-content: space-between;
+    gap: 20px;                /* optional spacing between columns */
+    flex-wrap: wrap;          /* wrap if needed */
+  }
+
+  .footer-links .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;                 /* make both columns equal width */
+  }
+
+  .footer-links .links a {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}
