@@ -51,6 +51,7 @@ const processCarousel = document.getElementById("process-carousel");
   // Initial call to highlight the first card
   updateActiveCard();
 
+  
 //   document ends/faq start
 
 const faqItems = document.querySelectorAll(".faq-item");

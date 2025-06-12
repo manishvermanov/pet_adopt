@@ -2,50 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="apply.css" />
-    <script src="apply.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="apply.css" />
+  <script src="apply.js" defer></script>
 
-    <!-- For Icons -->
-    <link
-      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- For Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-
-    <title>FurreverHome | Adoption Form</title>
+  <title>FurreverHome | Adoption Form</title>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav>
-        <a href="../index.html" class="brand">
-            <h1>Furrever<b class="accent">Home</b></h1>
-        </a>
-        <div class="menu">
-            <div class="btn">
-                <i class="fas fa-times close-btn"></i>
-            </div>
-            <a href="../index.html">Home</a>
-            <a href="../pets/pets.html">Pets</a>
-            <a href="../req/req.html">Requirements</a>
-            <a href="../about/about.html">About</a>
-            <a href="../stories/stories.html">Stories</a>
-        </div>
+  <!-- Navbar -->
+  <nav>
+    <a href="../index.html" class="brand">
+      <h1>Furrever<b class="accent">Home</b></h1>
+    </a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fas fa-times close-btn"></i>
+      </div>
+      <a href="../index.html">Home</a>
+      <a href="../pets/pets.html">Pets</a>
+      <a href="../req/req.html">Requirements</a>
+      <a href="../about/about.html">About</a>
+      <a href="../stories/stories.html">Stories</a>
+    </div>
 
-        <button class="btn-2" onclick="window.location.href='apply.html'">
-            <p>Adopt Now</p>
-            <i class="fa-solid fa-paw" style="font-size: 1.5rem;"></i>
-        </button>
+    <button class="btn-2" onclick="window.location.href='apply.html'">
+      <p>Adopt Now</p>
+      <i class="fa-solid fa-paw" style="font-size: 1.5rem;"></i>
+    </button>
 
-        <div class="btn">
-            <i class="fas fa-bars menu-btn"></i>
-        </div>
-    </nav>
+    <div class="btn">
+      <i class="fas fa-bars menu-btn"></i>
+    </div>
+  </nav>
 
-    <!-- Navbar ends/ form starts-->
-
-   <form class="adoption-form" onsubmit="return validateForm(event)">
+  <!-- Form Start -->
+  <form class="adoption-form" onsubmit="return validateForm(event)">
     <h2>Pet Adoption Request</h2>
 
     <div class="form-group">
@@ -65,6 +63,12 @@
       <input type="text" id="phone" required />
       <div id="phoneError" class="error"></div>
     </div>
+    <div class="form-group">
+  <label for="breed">Breed *</label>
+  <input type="text" id="breed" required />
+  <div id="breedError" class="error"></div>
+</div>
+
 
     <div class="form-group">
       <label for="pet">Type of Pet *</label>
@@ -78,11 +82,26 @@
       </select>
       <div id="petError" class="error"></div>
     </div>
+    <div class="form-group">
+  <label for="petId">Pet ID *</label>
+  <input type="text" id="petId" name="petId" required />
+  <div id="petIdError" class="error"></div>
+</div>
 
     <div class="form-group">
       <label for="message">Why do you want to adopt? *</label>
       <textarea id="message" rows="4" required></textarea>
       <div id="messageError" class="error"></div>
+    </div>
+
+    <!-- Radio Button for Follow-Up -->
+    <div class="form-group">
+      <label>Preferred Follow-Up Option *</label>
+      <div class="radio-options">
+        <label><input type="radio" name="followUp" value="Call">Schedule a Call</label>
+        <label><input type="radio" name="followUp" value="Visit">Visit Us</label>
+      </div>
+      <div id="followUpError" class="error"></div>
     </div>
 
     <div class="form-group">
@@ -97,52 +116,55 @@
       <button onclick="closeModal()">OK</button>
     </div>
   </div>
-    <!-- form ends/footer start -->
-    <footer id="footer">
-        <div class="footer-container">
 
-            <div class="footer-brand fbox">
-                <h1>Furrever<b class="accent">Home</b></h1>
-                <p>Find your perfect pet soul today!</p>
-                <div class="socials">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-links fbox">
-                <h2>Quick links</h2>
-                <div class="link-container">
-                    <div class="links">
-                        <a href="../index.html">Home</a>
-                        <a href="../about/about.html">About</a>
-                        <a href="../pets/pets.html">Pets</a>
-                    </div>
-                    <div class="links">
-                        <a href="../req/req.html">Requirements</a>
-                        <a href="../stories/stories.html">Stories</a>
-                        <a href="apply.html">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-contact-info fbox">
-                <div class="contact-info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Survey No. 124/1 Mittaganahalli Cross,Bengaluru, Karnataka 560064</p>
-                </div>
-                <div class="contact-info-item">
-                    <i class="fa-regular fa-envelope"></i>
-                    <p>furreverhome@gmail.com</p>
-                </div>
-                <div class="contact-info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>+91 8076707080</p>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+
+      <div class="footer-brand fbox">
+        <h1>Furrever<b class="accent">Home</b></h1>
+        <p>Find your perfect pet soul today!</p>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
-        <p class="copyright">All Rights Reserved To <b>FurreverHome</b></p>
-    </footer>
+      </div>
+
+      <div class="footer-links fbox">
+        <h2>Quick links</h2>
+        <div class="link-container">
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../pets/pets.html">Pets</a>
+          </div>
+          <div class="links">
+            <a href="../req/req.html">Requirements</a>
+            <a href="../stories/stories.html">Stories</a>
+            <a href="apply.html">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-contact-info fbox">
+        <div class="contact-info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Survey No. 124/1 Mittaganahalli Cross,Bengaluru, Karnataka 560064</p>
+        </div>
+        <div class="contact-info-item">
+          <i class="fa-regular fa-envelope"></i>
+          <p>furreverhome@gmail.com</p>
+        </div>
+        <div class="contact-info-item">
+          <i class="fa-solid fa-phone"></i>
+          <p>+91 8076707080</p>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">All Rights Reserved To <b>FurreverHome</b></p>
+  </footer>
 </body>
 
 </html>

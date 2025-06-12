@@ -158,6 +158,28 @@ nav.sticky {
   font-weight: bold;
 }
 
+/* Container of the radio buttons */
+.radio-options {
+  display: flex;
+  justify-content: center; /* center the whole group */
+  align-items: center;
+  gap: 2rem; /* spacing between options */
+  flex-wrap: nowrap; /* prevent wrapping */
+  margin-top: 0.5rem;
+  overflow-x: auto; /* allow scrolling if it overflows on smaller screens */
+  padding: 0.5rem 0;
+}
+
+/* Each label for radio option */
+.radio-options label {
+  white-space: nowrap; /* keep label text in a single line */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .form-group input,
 .form-group textarea,
 .form-group select {

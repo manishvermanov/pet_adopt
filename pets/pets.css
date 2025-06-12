@@ -55,7 +55,7 @@ nav.sticky {
 
 .brand {
   text-decoration: none;
-  transition: all ease-in-out0.3s;
+  transition: all ease-in-out 0.3s;
   color: var(--black);
 
 }
@@ -177,7 +177,7 @@ nav.sticky {
 }
 
 .character-card {
-  height: 20rem;
+  height: 23.5rem;
   perspective: 500px;
 }
 
@@ -208,7 +208,7 @@ nav.sticky {
 
 .card-front img,
 .card-back img {
-  height: 250px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }
@@ -232,6 +232,24 @@ nav.sticky {
   margin: 5px;
   text-decoration: underline;
 }
+
+.adopt-btn {
+  display: block;
+  margin: 30px auto 0 auto; /* Top margin + auto horizontal centering */
+  padding: 8px 12px;
+  width: 40%;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+
+}
+
+
+
 
 /* testimonial ends/ footer starts */
 
@@ -610,7 +628,7 @@ html, body {
   }
 
   .character-card {
-    height: 320px;
+    height: 380px;
     padding: 0 0.5rem;
 
   }
@@ -618,8 +636,8 @@ html, body {
 
   .card-front img {
     width: 100%;
-    height: 80%;
-    object-fit: cover;
+    height: 320px;
+        object-fit: cover;
   }
 
   .card-front p {
@@ -631,9 +649,14 @@ html, body {
     font-size: 1.3rem;
   }
 
+
   .card-back p{
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 0 2px;
+
   }
+
+ 
 
 
   /* footer starts */
