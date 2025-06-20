@@ -13,7 +13,7 @@ document.querySelectorAll(".menu a").forEach((link) =>
   link.addEventListener("click", toggleMenu)
 );
 
-// Prefill Pet ID and Breed from URL
+// Prefill Pet ID, Breed, and Pet Type from URL
 window.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const petId = urlParams.get("petId");
@@ -22,6 +22,23 @@ window.addEventListener("DOMContentLoaded", () => {
   if (petId) {
     const petIdInput = document.getElementById("petId");
     if (petIdInput) petIdInput.value = petId;
+
+    const petTypeInput = document.getElementById("pet");
+    if (petTypeInput) {
+      const prefix = petId.substring(0, 2).toUpperCase();
+      let petType = "";
+
+      if (prefix === "DO") petType = "Dog";
+      else if (prefix === "CA") petType = "Cat";
+      else if (prefix === "BI") petType = "Bird";
+
+      // Set pet type dropdown
+      Array.from(petTypeInput.options).forEach(option => {
+        if (option.value.toLowerCase() === petType.toLowerCase()) {
+          petTypeInput.value = option.value;
+        }
+      });
+    }
   }
 
   if (breed) {
@@ -87,7 +104,7 @@ function validateForm(event) {
   const petIdPattern = /^[A-Za-z]{2}[0-9]{4}$/;
   if (!petIdPattern.test(petId)) {
     document.getElementById("petIdError").textContent =
-      "Pet ID must be 2 letters followed by 4 digits (e.g., AB1234).";
+      "Pet ID must be 2 letters followed by 4 digits (e.g., DO1234).";
     valid = false;
   }
 

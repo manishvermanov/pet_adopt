@@ -48,9 +48,10 @@ nav {
 
 }
 
+
 nav.sticky {
-  background-color: white;
-  filter: drop-shadow(5px 5px 10px #ffbe745e);
+    background-color: white;  
+    filter: drop-shadow(0px 3px 10px rgba(10, 7, 0, 0.8));
 }
 
 .brand {
@@ -93,9 +94,10 @@ nav.sticky {
   transition: all 0.2s ease-out;
 }
 
-.menu a:hover {
-  color: white;
-  background-color: var(--accent);
+.menu a:hover,
+.menu a.active {
+    color: white;
+    background-color: var(--accent);
 }
 
 .btn {

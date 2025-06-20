@@ -14,17 +14,14 @@ document.querySelectorAll(".menu a").forEach((link) =>
 );
 
 // ID Generator Helpers
-const usedPetIds = new Set(Object.values(JSON.parse(localStorage.getItem("dogIdMap") || "{}")));
+function generateCategoryId(category) {
+  const prefix = category.slice(0, 2).toUpperCase(); // DO, CA, BI, etc.
+  const key = `${prefix}Counter`;
 
-function generateRandomPetId() {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const getLetters = () => chars.charAt(Math.floor(Math.random() * 26)) + chars.charAt(Math.floor(Math.random() * 26));
-  const getDigits = () => Math.floor(1000 + Math.random() * 9000); // 4 digits
-  let id;
-  do {
-    id = getLetters() + getDigits();
-  } while (usedPetIds.has(id));
-  usedPetIds.add(id);
+  let counter = parseInt(localStorage.getItem(key) || "1");
+  const id = `${prefix}${String(counter).padStart(4, "0")}`;
+
+  localStorage.setItem(key, counter + 1); // increment for next time
   return id;
 }
 
@@ -32,7 +29,7 @@ function getOrGenerateDogId(imageUrl) {
   let idMap = JSON.parse(localStorage.getItem("dogIdMap") || "{}");
   if (idMap[imageUrl]) return idMap[imageUrl];
 
-  const newId = generateRandomPetId();
+  const newId = generateCategoryId("dog");
   idMap[imageUrl] = newId;
   localStorage.setItem("dogIdMap", JSON.stringify(idMap));
   return newId;
@@ -59,7 +56,7 @@ const animalCards = {
         life_span: "12 - 15 years",
         temperament: "Friendly, Easygoing, Intelligent",
       },
-      id: "CA0001",
+      id: generateCategoryId("cat"),
     },
     {
       front: "images/pets/cat2.jpg",
@@ -72,7 +69,7 @@ const animalCards = {
         life_span: "12 - 17 years",
         temperament: "Curious, Gentle, Loyal",
       },
-      id: "CA0002",
+      id: generateCategoryId("cat"),
     },
   ],
   bird: [
@@ -87,7 +84,7 @@ const animalCards = {
         life_span: "30 – 40 years",
         temperament: "Curious, Gentle, Loyal",
       },
-      id: "BI0001",
+      id: generateCategoryId("bird"),
     },
     {
       front: "images/pets/6.webp",
@@ -100,7 +97,7 @@ const animalCards = {
         life_span: "30 – 60 years",
         temperament: "Affectionate, Social, Demanding",
       },
-      id: "BI0002",
+      id: generateCategoryId("bird"),
     },
   ],
 };
@@ -172,7 +169,6 @@ function renderCards(cards) {
         <p><strong>Height:</strong> ${card.breed_info.height}</p>
         <p><strong>Life Span:</strong> ${card.breed_info.life_span}</p>
         <p><strong>Temperament:</strong> ${card.breed_info.temperament}</p>
-       
       `
         : `<p>No breed info<br><strong>Pet ID:</strong> ${card.id}</p>`;
 
@@ -186,7 +182,6 @@ function renderCards(cards) {
           <div class="card-back">
             ${backContent}
             <a class="adopt-btn" href="../apply/apply.html?petId=${card.id}&name=${encodeURIComponent(card.name)}">Adopt</a>
-
           </div>
         </div>
       </div>`;

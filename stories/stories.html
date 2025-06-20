@@ -27,7 +27,7 @@
             <a href="../pets/pets.html">Pets</a>
             <a href="../req/req.html">Requirements</a>
             <a href="../about/about.html">About</a>
-            <a href="stories.html">Stories</a>
+            <a href="stories.html" class="active">Stories</a>
             <button class="btn-2" onclick="window.location.href='../apply/apply.html'">
             <p>Adopt Now</p>
             <i class="fa-solid fa-paw" style="font-size: 1.5rem;"></i>
@@ -108,20 +108,36 @@
     </section>
 
     <!-- post your review -->
-
-   <div class="review-box post-experience-box">
+<form class="review-box post-experience-box" id="experienceForm" novalidate>
   <h3 class="review-name">Share Your Experience</h3>
 
-  <input type="text" id="experienceName" placeholder="Your Name" />
+  <input type="text" id="experienceName" name="name" placeholder="Your Name" />
+  <div class="error-msg" id="nameError"></div>
+   <input type="text" id="petName" name="petName" placeholder="Your Pet's Name" />
+  <div class="error-msg" id="petNameError"></div>
 
-  <label for="experiencePhoto" class="custom-upload-label">Upload a photo</label>
-  <input type="file" id="experiencePhoto" accept="image/*" style="display: none;" />
-  <span id="fileNameDisplay" class="file-name">No file chosen</span>
+<label for="experiencePhoto" class="custom-upload-label">Upload a photo</label>
+<input type="file" id="experiencePhoto" name="photo" accept="image/*" style="display: none;" />
+<span id="fileNameDisplay" class="file-name">No file chosen</span>
+<small class="file-note">Accepted formats: JPG, PNG, GIF (Max 3MB)</small>
+<div class="error-msg" id="photoError"></div>
 
-  <textarea id="experienceInput" placeholder="Write your adoption story here..." rows="5"></textarea>
 
-  <button id="submitExperience">Post Experience</button>
+  <textarea id="experienceInput" name="experience" placeholder="Write your adoption story here..." rows="5"></textarea>
+  <div class="error-msg" id="storyError"></div>
+
+  <button type="submit" id="submitExperience">Post Experience</button>
+</form>
+
+<!-- Modal -->
+<div id="thankYouModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span id="modalCloseBtn" class="close-btn">&times;</span>
+    <h2>Thank you!</h2>
+    <p>We truly appreciate you taking the time to share your adoption experience. Our team will review your story, and once approved, it will be featured on our website to inspire others. Stay pawsitive!</p>
+  </div>
 </div>
+
 
 
 
@@ -169,7 +185,7 @@
                 </div>
             </div>
         </div>
-        <p class="copyright">All Rights Reserved To <b>FurreverHome</b></p>
+        <p class="copyright">&copy All Rights Reserved To <b>FurreverHome</b></p>
     </footer>
 </body>
 

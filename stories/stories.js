@@ -88,3 +88,108 @@ fileInput.addEventListener("change", () => {
     fileNameDisplay.textContent = "No file chosen";
   }
 });
+
+//post your own story
+// === DOM references ===
+const form = document.getElementById("experienceForm");
+const modal = document.getElementById("thankYouModal");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
+
+const nameInput = document.getElementById("experienceName");
+const petName = document.getElementById("petName");
+const photoInput = document.getElementById("experiencePhoto");
+const storyInput = document.getElementById("experienceInput");
+const nameError = document.getElementById("nameError");
+const petError = document.getElementById("petNameError")
+const photoError = document.getElementById("photoError");
+const storyError = document.getElementById("storyError");
+
+// === Display filename when photo selected ===
+photoInput.addEventListener("change", () => {
+  if (photoInput.files.length > 0) {
+    fileNameDisplay.textContent = photoInput.files[0].name;
+  } else {
+    fileNameDisplay.textContent = "No file chosen";
+  }
+});
+
+// === Validation functions ===
+function validateName() {
+  const name = nameInput.value.trim();
+  if (name.length < 3) {
+    nameError.textContent = "Name must be at least 3 characters.";
+    return false;
+  }
+  nameError.textContent = "";
+  return true;
+}
+
+function validatePet() {
+  const pet = petName.value.trim();
+  if (pet.length < 3) {
+    petError.textContent = "Name must be at least 3 characters.";
+    return false;
+  }
+  petError.textContent = "";
+  return true;
+}
+
+function validatePhoto() {
+  const file = photoInput.files[0];
+  if (!file) {
+    photoError.textContent = "Please upload a photo.";
+    return false;
+  }
+  if (file.size > 3 * 1024 * 1024) {
+    photoError.textContent = "Photo size must be under 3MB.";
+    return false;
+  }
+  photoError.textContent = "";
+  return true;
+}
+
+function validateStory() {
+  const story = storyInput.value.trim();
+  if (story.length < 20) {
+    storyError.textContent = "Story must be at least 20 characters.";
+    return false;
+  }
+  storyError.textContent = "";
+  return true;
+}
+
+// === Real-time validation on blur/change ===
+nameInput.addEventListener("blur", validateName);
+petName.addEventListener("blur",validatePet);
+photoInput.addEventListener("change", validatePhoto);
+storyInput.addEventListener("blur", validateStory);
+
+// === Form submission ===
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const isNameValid = validateName();
+  const isPetValid = validatePet();
+  const isPhotoValid = validatePhoto();
+  const isStoryValid = validateStory();
+
+  if (isNameValid && isPhotoValid && isStoryValid && isPetValid) {
+    modal.style.display = "flex";
+    form.reset();
+    fileNameDisplay.textContent = "No file chosen";
+  }
+});
+
+// === Close modal on click of X button ===
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+}
+
+// === Close modal if clicking outside the modal content ===
+window.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
